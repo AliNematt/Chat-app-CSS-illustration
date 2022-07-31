@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideRight {
+    from {transform: translateX(-300px);}
+    to {transform: translateX(0px);}
+}
+
+@keyframes slideLeft {
+    from {transform: translateX(+300px);}
+    to {transform: translateX(0px);}
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: url(./images/Frame\ 39.svg) no-repeat 50%;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    width: 850px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    width: 281px!important;
+    margin-right: 20px;
+}
+
+
+.mobile .user-data {
+    background-image: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius:25px 25px 5px 5px;
+    padding: 2.2rem 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    animation: fade 0.5s ease-in-out;
+}
+
+.mobile .user-data:after {
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    content: " ";
+    background-color: #fff;
+    position: absolute;
+    top: -25%;
+    right: calc(25% - 10px);
+}
+
+.mobile .user-data .left .avatar{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+
+}
+
+.mobile .user-data .left .arrow{
+    width: 15px;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+.mobile .user-data .info h2{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: -4px;
+    letter-spacing: 0.5px;
+}
+
+.mobile .user-data .info span{
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    color: hsl(276, 100%, 81%);
+}
+
+.mobile .user-data .right img{
+    width: 16px;
+}
+
+.mobile .chat-body {
+    background-color: hsl(270, 20%, 96%);
+    padding: 0.7rem 1rem;
+    border-radius:2px 2px 25px 25px;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile .chat-body .left{
+    transform: translateX(-300px);
+    animation: slideRight 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.mobile .chat-body .right{
+    transform: translateX(300px);
+    animation: slideLeft 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.mobile .chat-body div:nth-child(1){animation-delay: 0.6s;}
+.mobile .chat-body div:nth-child(2){animation-delay: 0.9s;}
+.mobile .chat-body div:nth-child(3){animation-delay: 1.5s;}
+.mobile .chat-body div:nth-child(4){animation-delay: 1.8s;}
+.mobile .chat-body div:nth-child(5){animation-delay: 2.2s;}
+.mobile .chat-body div:nth-child(6){animation-delay: 3s;}
+.mobile .chat-body div:nth-child(7){animation-delay: 3.4s;}
+.mobile .chat-body div:nth-child(8){animation-delay: 3.7s;}
+
+
+.mobile .chat-body .box {
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    font-size: 10px;
+    max-width: 70%;
+    margin: 5px 0;
+}
+
+.mobile .chat-body .he.box {
+    line-height: 1.5;
+    color: hsl(276, 55%, 52%);
+    background-color: #EDE5F4;
+    border-bottom-left-radius: 4px;
+}
+
+.mobile .chat-body .me.box {
+    line-height: 1.5;
+    color: hsl(271, 15%, 43%);
+    align-self: end;
+    border-bottom-right-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mobile .chat-body .gallery {
+    align-self: end;
+}
+
+.mobile .chat-body .gallery img {
+    margin: 5px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+.mobile .chat-body .prices {
+    background-image: linear-gradient(-90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border-radius: 15px 15px 15px 5px;
+    width: 85%;
+    margin: 5px 0;
+} 
+
+.mobile .chat-body .prices .time{
+   font-size: 10px;
+   opacity: 0.95; 
+}
+
+.mobile .chat-body .prices .time .cir-time {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid hsl(289, 100%, 72%);
+}
+
+.mobile .chat-body .prices .price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.mobile .chat-body .chatbox {
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: hsl(206, 6%, 79%);
+    font-size: 0.6rem;
+    position: relative;
+}
+
+.mobile .chat-body .chatbox .send{
+    background: url(./images/akar-icons_chevron-left.svg) no-repeat 50%;
+    background-size: 60%;
+    transform: rotate(180deg);
+    background-color: hsl(271, 36%, 24%);
+    width: 30px;
+    right: 3px;
+    top: 3px;
+    height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    font-size: 0.6rem;
+}
+
+.introduction {
+    width: 450px;
+    line-height: 1.5;
+}
+.introduction .title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color:hsl(271, 36%, 24%);
+}
+
+.introduction p {
+    color: hsl(270, 7%, 64%);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.attribution { 
+    margin-top: 20px;
+    font-size: 11px;
+    color: hsl(270, 7%, 64%);
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(264, 100%, 61%);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px) {
+    body {
+        background: url(./images/iPhone\ 11\ Pro\ Max\ -\ 1.svg) no-repeat 50%;
+        background-size: cover;
+        height: unset;
+    }
+    .container{
+        flex-direction: column;
+        width: 80vw;
+        margin: 30px 0;
+    }
+    .mobile {
+        margin: 0;
+    }
+    .introduction {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .introduction .title{
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    .introduction p{
+        font-size: 0.9rem;
+        padding:0 0.5rem;
+    }
+    .attribution { 
+        margin:0px 0 30px;
+    }
+}
